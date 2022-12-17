@@ -39,9 +39,9 @@ The model can perform GAN adaptation using very few samples from target domains 
 
 - Platform: Linux
 - Tesla V100 GPUs with CuDNN 10.1
-- PyTorch 1.7.0
-- Python 3.6.9
-- lmdb, tqdm
+- PyTorch>=1.3.0
+- Python>=3.5.0
+- lmdb, tqdm, wandb
 
 Alternatively, you can install all libiraries through:  `pip install -r requirements.txt`
 

@@ -1,5 +1,5 @@
 <h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em;letter-spacing:2.0px;">
-                FS-BAN: Born-Again Networks for Domain Generalization Few-Shot Classification</h1>
+                FS-BAN: Born-Again Networks for <br> Domain Generalization Few-Shot Classification</h1>
 <p align='center' style="text-align:center;font-size:1.25em;">
     <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Yunqing Zhao</a>&nbsp;/&nbsp;
     <a href="https://sites.google.com/site/mancheung0407/" target="_blank" style="text-decoration: none;">Ngai&#8209;Man Cheung</a></br>
@@ -26,7 +26,6 @@ Singapore University of Technology and Design (<b>SUTD</b>)<br/>
 
 ## Code will be available soon
 
---------------
 ## Installation and Environment:
 
 - Platform: Linux

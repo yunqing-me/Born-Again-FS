@@ -128,35 +128,6 @@ Use Babies and AFHQ-Cat as example: download images from [here](https://drive.go
 The estimated fisher information (i.e., the output of Importance Probing) and Weights (i.e., the output of the main adaptation corresponding to Figure 4 in the main paper) can be found [Here](https://drive.google.com/drive/folders/11uZjqJZl7ImapEndU4locAr2miHCJvDY?usp=share_link).
 
 
-## Train your own GAN !
-
-We provide all 10-shot target images and models used in our main paper and Supplementary. You can also adapt to other images selected by yourself.
-
-Source GAN:
-- [FFHQ](https://drive.google.com/file/d/1TQ_6x74RPQf03mSjtqUijM4MZEMyn7HI/view)
-- [LSUN-Church](https://drive.google.com/file/d/18NlBBI8a61aGBHA1Tr06DQYlf-DRrBOH/view)
-- [LSUN-Cars](https://drive.google.com/file/d/1O-yWYNvuMmirN8Q0Z4meYoSDtBfJEjGc/view)
-- ...
-
-Target Samples: [Link](https://drive.google.com/drive/folders/10skBzKjr8jJbWvTXKgA0yj-gT-aojRIE?usp=sharing)
-
-- Babies
-- Sunglasses
-- MetFaces
-- AFHQ-Cat
-- AFHQ-Dog
-- AFHQ-Wild
-- Sketches
-- Amedeo Modigliani's Paintings
-- Rafael's Paintings
-- Otto Dix's Paintings
-- Haunted houses
-- Van Gogh houses
-- Wrecked cars
-- ...
-
-Follow the experiment part in this repo and you can produce your customized results.
-
 # Bibtex
 If you find this project useful in your research, please consider citing our paper:
 

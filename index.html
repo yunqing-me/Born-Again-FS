@@ -207,9 +207,9 @@
 					</ul>
 					
 					<b>- 3: </b>
-					Schematic diagram of our proposed Importance Probing Mechanism: 
-					We measure the importance of each kernel for the target domain after probing and 
-					preserve source domain knowledge that is important for target domain adaptation. The same operations are applied to discriminator.
+					Schematic diagram of our proposed Few-shot Born-Again Networks (FS-bAN): 
+					1: Mutual Regularizaion. 2: Knowledge transfer with mismatched teacher. 3. Meta-control the temperature. 
+					The proposed multi-task learning objectives tackles unique challenges in DG-FSC.
 				</td>
 			</tr>
 		</table>
@@ -277,9 +277,12 @@
 		<center>
 			<tr>
 				<td>
-					<p style="text-align:justify; text-justify:inter-ideograph;"> Qualitative and quantitative comparison of 10-shot image generation with different FSIG methods. Images of each column are from the same noise input (Last row). 
-     				Left: 10 real target images for few-shot adaptation.
-     				Mid, Right: For target domain with close proximity (e.g., Babies, top), our method can generate high quality images with more refined details and diversity knowledge.
+					<p style="text-align:justify; text-justify:inter-ideograph;"> 
+					(Top) Meta-test accuracy (%) of DG-FSC with our proposed FS-BAN. We follow experiment setup as in Tseng et al.
+					We let All={miniImageNet, CUB, Cars, Places, Plantae} is the union of all domains for training and testing. In training phase,
+					we sample tasks from multiple seen domains, e.g., All\ {CUB}. In testing phase, we evaluate the model on tasks sampled
+					from the leave-one-out selected unseen domain, e.g., CUB. miniImageNet is always the source domain.
+					(Bottom) The effectiveness of each component in multi-task learning objectives.
 				</td>
 			</tr>
 		</center>

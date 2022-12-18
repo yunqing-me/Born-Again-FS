@@ -118,7 +118,7 @@
 
 <html>
 <head>
-	<title>FSIG-ImportanceProbing-KML</title>
+	<title>Born-Again-FS</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Creative and Descriptive Paper Title." />
 	<meta property="og:description" content="Paper description." />
@@ -193,14 +193,19 @@
 					<b> Overview and our contributions.</b> <br>
 					<b>- 1: </b>
 					We consider the problem of tackling few-shot classification on domains unseen in training, i.e., domain generalization few-shot classification (DG-FSC). <br>
+					
 					<b>- 2: </b>
 					Our work makes two main contributions: 
 					<ul>
-						<li>We discover and propose that the Born-Again Networks, which proposed in conventional supervised learning tasks, are still useful in episodic training for few-shot classification.
+						<li>
+							We discover and propose that the Born-Again Networks, which proposed in conventional supervised learning tasks, are still useful in episodic training for few-shot classification.
 						</li>
-						<li>We propose few-shot born-again networks (FS-BAN), a novel BAN approach that addresses unique issues in DG-FSC. The proposed FS-BAN achieves consistent state-of-the-art performance
-						over different baseline FSC models and six public datasets.</li>
+						<li>
+							We propose few-shot born-again networks (FS-BAN), a novel BAN approach that addresses unique issues in DG-FSC. The proposed FS-BAN achieves consistent state-of-the-art performance
+						over different baseline FSC models and six public datasets.
+						</li>
 					</ul>
+					
 					<b>- 3: </b>
 					Schematic diagram of our proposed Importance Probing Mechanism: 
 					We measure the importance of each kernel for the target domain after probing and 
@@ -217,7 +222,7 @@
 		<tr>
 			<td>
 				<p style="text-align:justify; text-justify:inter-ideograph;">
-				Few-shot image generation (FSIG) aims to learn to generate new and diverse samples given an extremely limited number of samples from a domain, e.g., 10 training samples. Recent work has addressed the problem using transfer learning approach, leveraging a GAN pretrained on a large-scale source domain dataset and adapting that model to the target domain based on very limited target domain samples. Central to recent FSIG methods are knowledge preserving criteria, which aim to select a subset of source model's knowledge to be preserved into the adapted model. However, a major limitation of existing methods is that their knowledge preserving criteria consider only source domain/source task, and they fail to consider target domain/adaptation task in  selecting source model's knowledge, casting doubt on their suitability for setups of different proximity between source and target domain. Our work makes two contributions. As our first contribution, we re-visit recent FSIG works and their experiments. Our important finding is that, under setups which assumption of  close proximity between source and target domains is relaxed, existing state-of-the-art (SOTA) methods which consider only source domain/source task in knowledge preserving perform no better than a baseline fine-tuning method. To address the limitation of existing methods, as our second contribution, we propose adaptation-aware kernel modulation to address general FSIG of different source-target domain proximity. Extensive experimental results show that the proposed method consistently achieves SOTA performance across source/target domains of different proximity, including challenging setups when source and target domains are more apart.
+				Conventional Few-shot classification (FSC) aims to recognize samples from novel classes given limited labeled data. Recently, domain generalization FSC (DG-FSC) has been proposed with the goal to recognize novel class samples from unseen domains. DG-FSC poses considerable challenges to many models due to the domain shift between base classes (used in training) and novel classes (encountered in evaluation). In this work, we make two novel contributions to tackle DG-FSC. Our first contribution is to propose Born-Again Network (BAN) episodic training and comprehensively investigate its effectiveness for DG-FSC. As a specific form of knowledge distillation, BAN has been shown to achieve improved generalization in conventional supervised classification with a closed-set setup. This improved generalization motivates us to study BAN for DG-FSC, and we show that BAN is promising to address the domain shift encountered in DG-FSC. Building on the encouraging finding, our second (major) contribution is to propose few-shot BAN, FS-BAN, a novel BAN approach for DG-FSC. Our proposed FS-BAN includes novel multi-task learning objectives: Mutual Regularization, Mismatched Teacher and Meta-Control Temperature, each of these is specifically designed to overcome central and unique challenges in DG-FSC, namely overfitting and domain discrepancy. We analyze different design choices of these techniques. We conduct comprehensive quantitative and qualitative analysis and evaluation using six datasets and three baseline models. The results suggest that our proposed FS-BAN consistently improves the generalization performance of baseline models and achieves state-of-the-art accuracy for DG-FSC.	
 			</td>
 		</tr>
 	</table>
@@ -250,20 +255,20 @@
 			</tr>
 		</center>
 	</table>
-	<!-- <table align=center width=800px>
-		<tr>
-			<td align=center width=800px>
-				<center>
-					<td><img class="round" style="width:800px" src="./resources/babies_compare.png"/></td>
-				</center>
-			</td> 
-		</tr>
-	</table> -->
 	<table align=center width=800px>
 		<tr>
 			<td align=center width=800px>
 				<center>
 					<td><img class="round" style="width:800px" src="./resources/results.jpg"/></td>
+				</center>
+			</td> 
+		</tr>
+	</table>
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+					<td><img class="round" style="width:800px" src="./resources/ablation.jpg"/></td>
 				</center>
 			</td>
 		</tr>

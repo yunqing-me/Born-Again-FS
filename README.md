@@ -24,7 +24,7 @@ Singapore University of Technology and Design (<b>SUTD</b>)<br/>
 
 ----------------------------------------------------------------------
 
-## Code will be available soon
+## Code will be available soon.
 
 ## Installation and Environment:
 

@@ -138,7 +138,7 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Few-shot Image Generation via Adaptation-Aware Kernel Modulation</span>
+		<span style="font-size:36px">FS-BAN: Born-Again Networks for Domain Generalization Few-shot Classification</span>
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr>
@@ -192,13 +192,14 @@
 					<p style="text-align:justify; text-justify:inter-ideograph;">
 					<b> Overview and our contributions.</b> <br>
 					<b>- 1: </b>
-					We consider the problem of FSIG with Transfer Learning using very limited target samples (e.g., 10-shot). <br>
+					We consider the problem of tackling few-shot classification on domains unseen in training, i.e., domain generalization few-shot classification (DG-FSC). <br>
 					<b>- 2: </b>
-					Our work makes two contributions: 
+					Our work makes two main contributions: 
 					<ul>
-						<li>We discover that when the close proximity assumption between source-target domain is relaxed, SOTA FSIG methods, e.g., EWC (Li et al.), CDC (Ojha et al.), DCL (Zhao et al.).
-							which consider only source domain/source task in knowledge preserving perform no better than a baseline fine-tuning method, e.g., TGAN, (Wang et al.)).</li>
-						<li>We propose a novel adaptation-aware kernel modulation for FSIG that achieves SOTA performance across source / target domains with different proximity. </li>
+						<li>We discover and propose that the Born-Again Networks, which proposed in conventional supervised learning tasks, are still useful in episodic training for few-shot classification.
+						</li>
+						<li>We propose few-shot born-again networks (FS-BAN), a novel BAN approach that addresses unique issues in DG-FSC. The proposed FS-BAN achieves consistent state-of-the-art performance
+						over different baseline FSC models and six public datasets.</li>
 					</ul>
 					<b>- 3: </b>
 					Schematic diagram of our proposed Importance Probing Mechanism: 

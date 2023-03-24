@@ -48,9 +48,9 @@ If you find this project useful in your research, please consider citing our pap
 }
 ```
 
-# Acknowledgement: 
+# Acknowledgement
 
-We appreciate the wonderful base implementation of Cross-domain few-shot classification from [Hung-Yu Tseng](https://github.com/hytseng0509/CrossDomainFewShot).
+We appreciate the wonderful base implementation of Cross-domain Few-shot Classification from [@Hung-Yu Tseng](https://github.com/hytseng0509/CrossDomainFewShot).
 
 We especially thank for the fruitful discussion with Yiluan Guo (Motional), Jiamei Sun (Microsoft) and Milad Abdollahzadeh (SUTD).
 

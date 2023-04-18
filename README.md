@@ -16,8 +16,9 @@
 <p align='center' style="text-align:center;font-size:2.5 em;">
 <b>
     <a href="https://yunqing-me.github.io/Born-Again-FS/" target="_blank" style="text-decoration: none;">Project Page</a>&nbsp;/&nbsp;
-    <a href="https://arxiv.org/pdf/2208.10930.pdf" target="_blank" style="text-decoration: none;">arXiv</a> /&nbsp;
-    <a href="https://arxiv.org/pdf/2208.10930.pdf" target="_blank" style="text-decoration: none;">Data Repository</a>&nbsp;
+    <a href="https://arxiv.org/pdf/2208.10930.pdf" target="_blank" style="text-decoration: none;">arXiv</a> 
+    <!-- /&nbsp; -->
+    <!-- <a href="https://arxiv.org/pdf/2208.10930.pdf" target="_blank" style="text-decoration: none;">Data Repository</a>&nbsp; -->
 
 </b>
 </p>
@@ -25,7 +26,7 @@
 
 ----------------------------------------------------------------------
 
-### Code / Project Page are under development...
+### Code are under development...
 
 # Installation and Environment:
 

@@ -1,6 +1,6 @@
-@inproceedings{zhao2022fsig-ip,
-  title={Few-shot Image Generation via Adaptation-Aware Kernel Modulation},
-  author={Yunqing Zhao, Milad Abdollahzadeh, Keshigeyan Chandrasegaran, Ngai-Man Cheung},
-  booktitle={Neurips},
+@article{zhao2022fs,
+  title={Fs-ban: Born-again networks for domain generalization few-shot classification},
+  author={Zhao, Yunqing and Cheung, Ngai-Man},
+  journal={arXiv preprint arXiv:2208.10930},
   year={2022}
 }

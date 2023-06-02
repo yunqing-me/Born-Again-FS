@@ -64,10 +64,25 @@ cd ..
 You may encounter some download issues while processing the datasets, this is due to the original dataset links are invalid. Here, we provide the [data repository](https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing) to help download those datasets. Meanwhile, to download/train/test on `tieredImageNet`, please refer to [Torchmeta](https://github.com/tristandeleu/pytorch-meta).
 
 
-<!-- # Experiments
+# Experiments
 ## Feature Encoder Pretraining
+we pre-train the model using a linear classifier head on training set of mini-ImageNet (64 categories).
 
-## Teacher Network Pretraining 
+Similar to [CrossDomainFewShot](https://github.com/hytseng0509/CrossDomainFewShot), We adopt `baseline++` for MatchingNet, and `baseline` from [CloserLookFewShot](https://github.com/wyharveychen/CloserLookFewShot) for other metric-based frameworks.
+
+```
+python train_baseline.py --method PRETRAIN --dataset miniImagenet --name PRETRAIN --train_aug
+```
+You can specify `--train_aug` to perform data augmentation, `--method baseline` or `--method baseline++` to decide the metric of the classifier. After pretraining, we replace the linear classifier head with different metric functions.
+
+Alternatively, you can directly download the pretrained encoder (provieded by [CrossDomainFewShot](https://github.com/hytseng0509/CrossDomainFewShot)):
+```
+cd output/checkpoints
+python download_encoder.py
+cd ../..
+```
+
+<!-- ## Teacher Network Pretraining 
 
 ## FS-BAN: Born-Again Networks for DG-FSC
 

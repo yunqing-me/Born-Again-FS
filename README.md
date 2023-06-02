@@ -50,7 +50,6 @@ Then, clone this repository:
 git clone https://github.com/yunqing-me/Born-Again-FS.git
 cd Born-Again-FS
 ```
-
 # Datasets
 Download 5 datasets seperately with the following commands.
 Set `DATASET_NAME` to either: `cars`, `cub`, `miniImagenet`, `places`, or `plantae`.
@@ -82,11 +81,26 @@ python download_encoder.py
 cd ../..
 ```
 
-<!-- ## Teacher Network Pretraining 
+## Training Teacher Network 
+```
+cd baseline_model
+bash _train_teacher.sh
+```
+where you can specify the model architecutre in `Conv4/Conv6/Resnet10` etc.
 
-## FS-BAN: Born-Again Networks for DG-FSC
+## FS-BAN: Born-Again Distillation for DG-FSC
+```
+cd fsban
+bash _train_student.sh
+```
+## Evaluation:
+Test the metric-based framework `METHOD` on the unseen domain `TESTSET` (held-out from muliple seen source domains).
 
-# Evaluation: -->
+Specify the saved model (in `./output/checkpoints`) you want to evaluate with `--name` (e.g., `--name YOUR-Model-Name` from the above example).
+
+```
+python test.py --method METHOD --name NAME --dataset TESTSET
+```
 
 # Bibtex
 If you find this project useful in your research, please consider citing our paper:

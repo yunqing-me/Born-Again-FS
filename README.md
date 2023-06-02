@@ -50,7 +50,6 @@ Then, clone this repository:
 git clone https://github.com/yunqing-me/Born-Again-FS.git
 cd Born-Again-FS
 ```
-You may encounter some download issues while processing the datasets, this is due to the original dataset links are invalid. Here, we provide the [data repository](https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing) to help download those datasets.
 
 # Datasets
 Download 5 datasets seperately with the following commands.
@@ -61,6 +60,8 @@ cd filelists
 python3 process.py DATASET_NAME
 cd ..
 ```
+
+You may encounter some download issues while processing the datasets, this is due to the original dataset links are invalid. Here, we provide the [data repository](https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing) to help download those datasets. Meanwhile, to download/train/test on `tieredImageNet`, please refer to [Torchmeta](https://github.com/tristandeleu/pytorch-meta).
 
 # Bibtex
 If you find this project useful in your research, please consider citing our paper:

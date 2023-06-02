@@ -1,10 +1,12 @@
 <h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em;letter-spacing:2.0px;">
                 FS-BAN: Born-Again Networks for <br> Domain Generalization Few-Shot Classification</h1>
-<p align='center' style="text-align:center;font-size:1.25em;">
+<p align='center' style="text-align:center;font-size:1.4em;">
     <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Yunqing Zhao</a>&nbsp;,&nbsp;
     <a href="https://sites.google.com/site/mancheung0407/" target="_blank" style="text-decoration: none;">Ngai&#8209;Man Cheung</a></br>
-Singapore University of Technology and Design</br>
-<b><em>IEEE - TIP, 2023</em></b></br>
+</p>
+<p align='center' style="text-align:center;font-size:1.2em;">
+<b>Singapore University of Technology and Design (SUTD)</b></br>
+<b><em>IEEE Transactions on Image Processing (T-IP), 2023</em></b></br>
 </p>
 
 <p align='center';>
@@ -15,8 +17,9 @@ Singapore University of Technology and Design</br>
 
 <p align='left' style="text-align:left;font-size:1.32em;">
 <b>
-    <a href="https://yunqing-me.github.io/Born-Again-FS/" target="_blank" style="text-decoration: none;">Project Page</a>&nbsp;/&nbsp;
-    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10102807" target="_blank" style="text-decoration: none;">Paper Profile</a> 
+    [<a href="https://yunqing-me.github.io/Born-Again-FS/" target="_blank" style="text-decoration: none;">Project Page</a>]&nbsp; /&nbsp;
+    [<a href="https://ieeexplore.ieee.org/document/10102807" target="_blank" style="text-decoration: none;">Paper Profile</a>]&nbsp; /&nbsp;
+    [<a href="https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing" target="_blank" style="text-decoration: none;">Data Repository</a>]
 </b>
 </p>
 
@@ -41,6 +44,24 @@ You can install the libiraries through:  `pip install -r requirements.txt`. Alte
 conda env create -f environment.yml -n fsc
 conda activate fsc
 ```
+
+Then, clone this repository:
+```
+git clone https://github.com/yunqing-me/Born-Again-FS.git
+cd Born-Again-FS
+```
+You may encounter some download issues while processing the datasets, this is due to the original dataset links are invalid. Here, we provide the [data repository](https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing) to help download those datasets.
+
+# Datasets
+Download 5 datasets seperately with the following commands.
+Set `DATASET_NAME` to either: `cars`, `cub`, `miniImagenet`, `places`, or `plantae`.
+
+```
+cd filelists
+python3 process.py DATASET_NAME
+cd ..
+```
+
 # Bibtex
 If you find this project useful in your research, please consider citing our paper:
 

@@ -1,6 +1,6 @@
 <h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em;letter-spacing:2.0px;">
                 FS-BAN: Born-Again Networks for <br> Domain Generalization Few-Shot Classification</h1>
-<p align='center' style="text-align:center;font-size:1.4em;">
+<p align='center' style="text-align:center;font-size:1.5em;">
     <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Yunqing Zhao</a>&nbsp;,&nbsp;
     <a href="https://sites.google.com/site/mancheung0407/" target="_blank" style="text-decoration: none;">Ngai&#8209;Man Cheung</a></br>
 </p>
@@ -62,6 +62,16 @@ cd ..
 ```
 
 You may encounter some download issues while processing the datasets, this is due to the original dataset links are invalid. Here, we provide the [data repository](https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing) to help download those datasets. Meanwhile, to download/train/test on `tieredImageNet`, please refer to [Torchmeta](https://github.com/tristandeleu/pytorch-meta).
+
+
+<!-- # Experiments
+## Feature Encoder Pretraining
+
+## Teacher Network Pretraining 
+
+## FS-BAN: Born-Again Networks for DG-FSC
+
+# Evaluation: -->
 
 # Bibtex
 If you find this project useful in your research, please consider citing our paper:

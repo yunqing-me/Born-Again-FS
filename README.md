@@ -4,9 +4,10 @@
     <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Yunqing Zhao</a>&nbsp;,&nbsp;
     <a href="https://sites.google.com/site/mancheung0407/" target="_blank" style="text-decoration: none;">Ngai&#8209;Man Cheung</a></br>
 </p>
-<p align='center' style="text-align:center;font-size:1.2em;">
-<b>Singapore University of Technology and Design (SUTD)</b></br>
-<b><em>IEEE Transactions on Image Processing (T-IP), 2023</em></b></br>
+
+<p align='center' style="text-align:center;font-size:1.32em;">
+Singapore University of Technology and Design</br>
+IEEE Transactions on Image Processing (T-IP), 2023</br>
 </p>
 
 <p align='center';>
@@ -33,10 +34,17 @@ Pytorch implementation for our FS-BAN for cross-domain / domain generalization f
 
 # Installation:
 
+
 - Platform: Linux
 - NVIDIA V100 GPUs with CuDNN 10.1
 - PyTorch>=1.4.0
 - lmdb, tqdm, wandb
+
+Firstly, clone this repository:
+```
+git clone https://github.com/yunqing-me/Born-Again-FS.git
+cd Born-Again-FS
+```
 
 You can install the libiraries through:  `pip install -r requirements.txt`. Alternatively, a suitable conda environment named `fsc` can be created and activated with:
 
@@ -45,22 +53,20 @@ conda env create -f environment.yml -n fsc
 conda activate fsc
 ```
 
-Then, clone this repository:
-```
-git clone https://github.com/yunqing-me/Born-Again-FS.git
-cd Born-Again-FS
-```
+
 # Datasets
 Download 5 datasets seperately with the following commands.
 Set `DATASET_NAME` to either: `cars`, `cub`, `miniImagenet`, `places`, or `plantae`.
 
 ```
 cd filelists
-python3 process.py DATASET_NAME
+python process.py DATASET_NAME
 cd ..
 ```
 
-You may encounter some download issues while processing the datasets, this is due to the original dataset links are invalid. Here, we provide the [data repository](https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing) to help download those datasets. Meanwhile, to download/train/test on `tieredImageNet`, please refer to [Torchmeta](https://github.com/tristandeleu/pytorch-meta).
+You may encounter some download issues while processing these datasets, this is due to the original dataset links were invalid. Here, we provide the [data repository](https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing) to help download those datasets. Then, simply move each separate dataset `e.g., CUB_200_2011.tgz` to the corresponding folder `e.g., ./filelists/cub` and use the script to process it `e.g., write_cub_filelist.py`. 
+
+Meanwhile, to download and process `tieredImageNet` dataset, please refer to [Torchmeta](https://github.com/tristandeleu/pytorch-meta).
 
 
 # Experiments

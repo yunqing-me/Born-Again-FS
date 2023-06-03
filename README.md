@@ -87,18 +87,20 @@ python download_encoder.py
 cd ../..
 ```
 
-## Training Teacher Network 
+## Training the Teacher Network 
 ```
 cd baseline_model
 bash _train_teacher.sh
 ```
-where you can specify the model architecutre in `Conv4/Conv6/Resnet10` etc.
+where you can specify the model architecutre in `Conv4/Conv6/Resnet10` etc. Meanwhile, it is necessary to prepare the corresponding (pretrained) models for `--warmup` to load the pretrained weights. For each individual datasets, you need to prepare the corresponding teacher network, by specifying `--dataset`.
 
 ## FS-BAN: Born-Again Distillation for DG-FSC
 ```
 cd fsban
 bash _train_student.sh
 ```
+where you can tune the hyperparameters in the script.
+
 ## Evaluation:
 Test the metric-based framework `METHOD` on the unseen domain `TESTSET` (held-out from muliple seen source domains).
 

@@ -32,6 +32,8 @@ Pytorch implementation for our FS-BAN for cross-domain / domain generalization f
 1. improve exisiting few-shot classification methods under **cross-domain** setting to stat-of-the-art performance
 2. achieve stat-of-the-art performance under **single-domain** few-shot classification setting.
 
+![](./assets/2c.jpg)
+
 # Installation:
 
 
@@ -55,6 +57,9 @@ conda activate fsc
 
 
 # Datasets
+![](./assets/miniimagenet.jpg)
+
+
 Download 5 datasets seperately with the following commands.
 Set `DATASET_NAME` to either: `cars`, `cub`, `miniImagenet`, `places`, or `plantae`.
 

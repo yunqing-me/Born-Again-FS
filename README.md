@@ -48,7 +48,7 @@ git clone https://github.com/yunqing-me/Born-Again-FS.git
 cd Born-Again-FS
 ```
 
-You can install the libiraries through:  `pip install -r requirements.txt`. Alternatively, a suitable conda environment named `fsc` can be created and activated with:
+You can install the libraries through:  `pip install -r requirements.txt`. Alternatively, a suitable conda environment named `fsc` can be created and activated with:
 
 ```
 conda env create -f environment.yml -n fsc
@@ -60,7 +60,7 @@ conda activate fsc
 ![](./assets/miniimagenet.jpg)
 
 
-Download 5 datasets seperately with the following commands.
+Download 5 datasets separately with the following commands.
 Set `DATASET_NAME` to either: `cars`, `cub`, `miniImagenet`, `places`, or `plantae`.
 
 ```

@@ -27,10 +27,10 @@ IEEE Transactions on Image Processing (T-IP), 2023</br>
 
 <!-- ---------------------------------------------------------------------- -->
 
-Pytorch implementation for our FS-BAN for cross-domain / domain generalization few-shot classification. With the proposed born-again networks with multi-task learning, we are able to:
+PyTorch implementation of FS-BAN for cross-domain / domain generalization few-shot classification. With the proposed born-again networks with multi-task learning, we are able to:
 
-1. improve exisiting few-shot classification methods under **cross-domain** setting to stat-of-the-art performance
-2. achieve stat-of-the-art performance under **single-domain** few-shot classification setting.
+1. improve existing few-shot classification methods under the **cross-domain** setting to state-of-the-art performance
+2. achieve state-of-the-art performance under the **single-domain** few-shot classification setting.
 
 ![](./assets/2c.jpg)
 
@@ -48,7 +48,7 @@ git clone https://github.com/yunqing-me/Born-Again-FS.git
 cd Born-Again-FS
 ```
 
-You can install the libraries through:  `pip install -r requirements.txt`. Alternatively, a suitable conda environment named `fsc` can be created and activated with:
+You can install the libraries with `pip install -r requirements.txt`. Alternatively, a suitable conda environment named `fsc` can be created and activated with:
 
 ```
 conda env create -f environment.yml -n fsc
@@ -69,23 +69,23 @@ python process.py DATASET_NAME
 cd ..
 ```
 
-You may encounter some download issues while processing these datasets, this is due to the original dataset links were invalid. Here, we provide the [data repository](https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing) to help download those datasets. Then, simply move each separate dataset `e.g., CUB_200_2011.tgz` to the corresponding folder `e.g., ./filelists/cub` and use the script to process it `e.g., write_cub_filelist.py`. 
+You may encounter some download issues while processing these datasets, because the original dataset links are no longer valid. Here, we provide the [data repository](https://drive.google.com/drive/folders/1PIlO7NK8NpwLYUwT76ms_FVca1r0GKkZ?usp=sharing) to help download those datasets. Then, simply move each separate dataset `e.g., CUB_200_2011.tgz` to the corresponding folder `e.g., ./filelists/cub` and use the script to process it `e.g., write_cub_filelist.py`.
 
-Meanwhile, to download and process `tieredImageNet` dataset, please refer to [Torchmeta](https://github.com/tristandeleu/pytorch-meta).
+Meanwhile, to download and process the `tieredImageNet` dataset, please refer to [Torchmeta](https://github.com/tristandeleu/pytorch-meta).
 
 
 # Experiments
 ## Feature Encoder Pretraining
-we pre-train the model using a linear classifier head on training set of mini-ImageNet (64 categories).
+We pre-train the model using a linear classifier head on the training set of mini-ImageNet (64 categories).
 
-Similar to [CrossDomainFewShot](https://github.com/hytseng0509/CrossDomainFewShot), We adopt `baseline++` for MatchingNet, and `baseline` from [CloserLookFewShot](https://github.com/wyharveychen/CloserLookFewShot) for other metric-based frameworks.
+Similar to [CrossDomainFewShot](https://github.com/hytseng0509/CrossDomainFewShot), we adopt `baseline++` for MatchingNet, and `baseline` from [CloserLookFewShot](https://github.com/wyharveychen/CloserLookFewShot) for other metric-based frameworks.
 
 ```
 python train_baseline.py --method PRETRAIN --dataset miniImagenet --name PRETRAIN --train_aug
 ```
 You can specify `--train_aug` to perform data augmentation, `--method baseline` or `--method baseline++` to decide the metric of the classifier. After pretraining, we replace the linear classifier head with different metric functions.
 
-Alternatively, you can directly download the pretrained encoder (provieded by [CrossDomainFewShot](https://github.com/hytseng0509/CrossDomainFewShot)):
+Alternatively, you can directly download the pretrained encoder (provided by [CrossDomainFewShot](https://github.com/hytseng0509/CrossDomainFewShot)):
 ```
 cd output/checkpoints
 python download_encoder.py
@@ -97,7 +97,7 @@ cd ../..
 cd baseline_model
 bash _train_teacher.sh
 ```
-where you can specify the model architecutre in `Conv4/Conv6/Resnet10` etc. Meanwhile, it is necessary to prepare the corresponding (pretrained) models for `--warmup` to load the pretrained weights. For each individual datasets, you need to prepare the corresponding teacher network, by specifying `--dataset`.
+where you can specify the model architecture, such as `Conv4`, `Conv6`, or `Resnet10`. Meanwhile, it is necessary to prepare the corresponding (pretrained) models for `--warmup` to load the pretrained weights. For each individual dataset, you need to prepare the corresponding teacher network, by specifying `--dataset`.
 
 ## FS-BAN: Born-Again Distillation for DG-FSC
 ```
@@ -107,7 +107,7 @@ bash _train_student.sh
 where you can tune the hyperparameters in the script.
 
 ## Evaluation:
-Test the metric-based framework `METHOD` on the unseen domain `TESTSET` (held-out from muliple seen source domains).
+Test the metric-based framework `METHOD` on the unseen domain `TESTSET` (held-out from multiple seen source domains).
 
 Specify the saved model (in `./output/checkpoints`) you want to evaluate with `--name` (e.g., `--name YOUR-Model-Name` from the above example).
 
@@ -115,7 +115,7 @@ Specify the saved model (in `./output/checkpoints`) you want to evaluate with `-
 python test.py --method METHOD --name NAME --dataset TESTSET
 ```
 
-# Bibtex
+# BibTeX
 If you find this project useful in your research, please consider citing our paper:
 
 ```
